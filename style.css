@@ -1,133 +1,191 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body {
-    background: #f8f9fb;
+body{
+    background:#f5f5f5;
+    min-height:100vh;
 }
 
-/* Navbar */
+/* =======================
+   NAVBAR
+======================= */
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 30px;
-    background: #fff;
-    border-bottom: 3px solid #000;
+.navbar{
+    width:100%;
+    height:90px;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    border-bottom:3px solid #000;
 }
 
-.logo img {
-    width: 250px;
-    max-width: 90%;
-    margin-bottom: 30px;
+.logo{
+    display:flex;
+    align-items:center;
 }
 
-.menu-btn {
-    font-size: 35px;
-    cursor: pointer;
-    color: #000;
+.logo img{
+    height:60px;
+    width:auto;
+    object-fit:contain;
 }
 
-/* Hero */
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 25px;
+.menu-btn{
+    font-size:38px;
+    cursor:pointer;
+    color:#000;
 }
 
-.hero-logo img {
-    width: 250px;
-    max-width: 50%;
-    margin-bottom: 10px;
+.menu-btn:hover{
+    color:#555;
 }
 
-.hero-text h2 {
-    color: #d11372;
-    font-size: 30px;
-    margin-bottom: 25px;
+/* =======================
+   HERO SECTION
+======================= */
+
+.hero{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
 }
 
-.hero-text {
-    max-width: 850px;
+/* Logo Tengah */
+
+.hero-logo{
+    margin-bottom:30px;
 }
 
-.hero-text p {
-    color: #d11372;
-    line-height: 1.9;
-    font-size: 18px;
-    margin-bottom: 20px;
+.hero-logo img{
+    width:300px;
+    max-width:90%;
+    height:auto;
+    object-fit:contain;
+    transition:0.3s;
 }
 
-.button-group {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 420px;
+.hero-logo img:hover{
+    transform:scale(1.05);
 }
 
-.btn-outline,
-.btn-primary {
-    text-decoration: none;
-    padding: 18px;
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: 600;
-    transition: .3s;
+/* =======================
+   TEXT
+======================= */
+
+.hero-text{
+    max-width:850px;
 }
 
-.btn-outline {
-    border: 3px solid #00b7ff;
-    color: #00b7ff;
-    background: white;
+.hero-text h2{
+    color:#d1197e;
+    font-size:30px;
+    margin-bottom:25px;
+    font-weight:700;
 }
 
-.btn-outline:hover {
-    background: #00b7ff;
-    color: white;
+.hero-text p{
+    color:#d1197e;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:25px;
 }
 
-.btn-primary {
-    background: linear-gradient(135deg,
-            #37c6ff,
-            #e34cc8);
-    color: white;
-    border: none;
+/* =======================
+   BUTTON
+======================= */
+
+.button-group{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:100%;
+    max-width:420px;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+.btn-outline{
+    text-decoration:none;
+    border:3px solid #2bbcff;
+    color:#2bbcff;
+    background:#fff;
+    padding:16px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-/* Responsive */
+.btn-outline:hover{
+    background:#2bbcff;
+    color:#fff;
+}
 
-@media(max-width:768px) {
+.btn-primary{
+    text-decoration:none;
+    background:linear-gradient(
+        135deg,
+        #37c6ff,
+        #f04ab8
+    );
+    color:#fff;
+    padding:18px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:700;
+    transition:0.3s;
+}
 
-    .hero-logo img {
-        width: 220px;
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        height:80px;
+        padding:0 15px;
     }
 
-    .hero-text h2 {
-        font-size: 22px;
+    .logo img{
+        height:45px;
     }
 
-    .hero-text p {
-        font-size: 15px;
+    .menu-btn{
+        font-size:30px;
+    }
+
+    .hero-logo img{
+        width:220px;
+    }
+
+    .hero-text h2{
+        font-size:22px;
+    }
+
+    .hero-text p{
+        font-size:15px;
+        line-height:1.6;
     }
 
     .btn-outline,
-    .btn-primary {
-        font-size: 18px;
+    .btn-primary{
+        font-size:18px;
+        padding:15px;
     }
 }
