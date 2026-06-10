@@ -11,7 +11,7 @@
 body{
     background:#f8f9fb;
     min-height:100vh;
-    font-family:'Poppins',sans-serif;
+    font-family:'Chelsea Market', cursive;
 }
 
 /* =====================
@@ -100,7 +100,7 @@ body{
 }
 
 .hero-text p{
-    font-family:'Poppins', sans-serif;
+    font-family:'Chelsea Market', cursive;
     font-size:18px;
     line-height:1.9;
     color:#d91b7b;
@@ -128,7 +128,7 @@ body{
     border:3px solid #27bfff;
     padding:16px;
     border-radius:15px;
-    font-family:'Poppins',sans-serif;
+    font-family:'Chelsea Market', cursive;
     font-size:20px;
     font-weight:600;
     transition:0.3s;
@@ -145,7 +145,7 @@ body{
     border:3px solid #27bfff;
     padding:16px;
     border-radius:15px;
-    font-family:'Poppins',sans-serif;
+    font-family:'Chelsea Market', cursive;
     font-size:20px;
     font-weight:600;
     transition:0.3s;
