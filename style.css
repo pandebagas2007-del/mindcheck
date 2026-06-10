@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f9fb;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    background: #fff;
+    border-bottom: 3px solid #000;
+}
+
+.logo img {
+    width: 200px;
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+.menu-btn {
+    font-size: 35px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.hero-logo img {
+    width: 280px;
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+.hero-text h2 {
+    color: #d11372;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 850px;
+}
+
+.hero-text p {
+    color: #d11372;
+    line-height: 1.9;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.btn-outline,
+.btn-primary {
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-outline {
+    border: 3px solid #00b7ff;
+    color: #00b7ff;
+    background: white;
+}
+
+.btn-outline:hover {
+    background: #00b7ff;
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg,
+            #37c6ff,
+            #e34cc8);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .hero-logo img {
+        width: 220px;
+    }
+
+    .hero-text h2 {
+        font-size: 22px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .btn-outline,
+    .btn-primary {
+        font-size: 18px;
+    }
+}
